@@ -1,0 +1,115 @@
+h2 {
+    color: rgb(82, 82, 83);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+}
+
+h2::after {  /* This is the underline */
+	display: block;
+	content: "";
+	height: 2px;
+	width: 350px;
+	background: rgb(82, 82, 83);
+	margin: 5px auto 40px;
+	box-shadow: 5px 2px 3px rgba(0,0,0,0.5);
+}
+
+#Home {
+    background: url(../images/RedRocklake.jpg) no-repeat 50% 50%;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	display: block;
+	height: auto;
+	padding-top: 365px; /* This is spacer before the Main title Logo */
+	padding-bottom: 300px; /* This is spacer after the Main title Logo */
+    color: #fff;
+    line-height: 0%;
+    text-align: center;
+    text-shadow: 2px 2px 2px #000;
+}
+
+#About {
+    background-color: rgb(202, 244, 250);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 50px; 
+    padding-top: 50px;  
+}
+
+/* Just an option for the columns later down the road
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info {
+    align-items: left;
+}*/
+
+.photo img {
+    width: 50%;
+    height: 50%;
+    border: 1px solid rgb(71, 70, 70);
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px rgb(71, 70, 70, .5);
+}
+
+#Skills {
+    background-color: rgb(236, 234, 234);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 50px; 
+    padding-top: 50px;
+    text-align: center;
+    line-height: 2px;
+}
+
+#Skills img {
+    height: 125px;
+    width: 125px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#progress {
+    padding: 15px;
+}
+
+#Portfolio {
+    background-color: rgb(202, 244, 250);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 50px; 
+    padding-top: 50px;
+}
+
+#Portfolio p {
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Portfolio img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+footer {
+    background-color:rgb(236, 234, 234);
+    color: #000;
+	text-shadow: 2px 2px 8px 0 (0,0,0,0.4);
+    padding: 20px 50px 20px 50px;
+    text-align: right;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
