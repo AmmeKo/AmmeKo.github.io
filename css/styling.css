@@ -1,3 +1,15 @@
+nav, .dropdown-menu {
+    background-color: rgba(200,200,200,0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.navbar-brand, .nav-link {
+    color: #000;
+    text-decoration: none;
+    text-emphasis: none;
+}
+
 h2 {
     color: rgb(82, 82, 83);
     font-family: Arial, Helvetica, sans-serif;

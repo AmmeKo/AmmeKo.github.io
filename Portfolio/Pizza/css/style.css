@@ -1,0 +1,62 @@
+body {
+    background-image: url("../images/pizza.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 1em;
+}
+
+div.jumbotron {
+    background-color: rgba(19, 4, 4, 0.5);
+    color: rgba(204, 204, 204, 1)
+}
+
+#transbox {
+    margin: 30px;
+    background-color: rgba(204, 204, 204, .7);
+    border: 1px solid black;
+    text-align: center;
+}
+
+#transbox h2 {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 1);
+}
+
+.orderform {
+    margin: 30px;
+    background-color: rgba(19, 4, 4, .5);
+    border: 1px solid black;
+    text-align: center;
+}
+
+div.col {
+    margin: 30px;
+    background-color: rgba(204, 204, 204, .7);
+    border: 1px solid black;
+    text-align: left;
+}
+
+div.col p {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}
+
+h3 {
+    color: rgba(204, 204, 204, 1);
+}
+
+div.price {
+    text-align: right;
+}
+
+div.summary {
+    background-color: rgba(204, 204, 204, .7);
+}
+
+div.form-check {
+    color: black;
+}
