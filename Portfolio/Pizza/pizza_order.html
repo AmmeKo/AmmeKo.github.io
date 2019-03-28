@@ -386,7 +386,7 @@
         else priceVeggies.innerHTML = "$" + veggiePrice.toFixed(2);
     
         // TOTAL
-        var subtotal = (Number(sizePrice) + Number(crustPrice) + Number(saucePrice) + Number(cheesePrice));
+        var subtotal = (Number(sizePrice) + Number(crustPrice) + Number(saucePrice) + Number(cheesePrice) + Number(meatPrice) + Number(veggiePrice));
         var tax = subtotal * 0.04;
         var total = subtotal + tax;
         subtotalPrice.innerHTML = "$" + subtotal.toFixed(2);
