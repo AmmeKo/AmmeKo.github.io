@@ -333,69 +333,96 @@
 <script>
     
     function Order() {
+        //Size
         var sizeId = $("input[name='size']:checked").prop("id");
         var sizePrice = $("input[name='size']:checked").prop("value");
         pizzaSize.innerHTML = sizeId + " Pizza";
         priceSize.innerHTML = "$" + sizePrice;
 
+        //Crust
         var crustId = $("input[name='crust']:checked").prop("id");
         var crustPrice = $("input[name='crust']:checked").prop("value");
         pizzaCrust.innerHTML = crustId + " Crust";
         priceCrust.innerHTML = "$" + crustPrice;
         
+        //Sauce
         var sauceId = $("input[name='sauce']:checked").prop("id");
         var saucePrice = $("input[name='sauce']:checked").prop("value");
         pizzaSauce.innerHTML = sauceId + " Sauce";
         priceSauce.innerHTML = "$" + saucePrice;
 
+        //Cheese
         var cheeseId = $("input[name='cheese']:checked").prop("id");
         var cheesePrice = $("input[name='cheese']:checked").prop("value");
         pizzaCheese.innerHTML = "<strong>Cheese: </strong>" + cheeseId;
         priceCheese.innerHTML = "$" + cheesePrice;
 
+        //MEAT NAMES
         meatId = [];
         $("input:checkbox[name='meat']:checked").each(function(){
             meatId.push($(this).attr("id"));
         });
         pizzaMeat.innerHTML = "<strong>Meats: </strong>" + meatId;
         
+        //MEAT PRICE
         mPrice = [];
         $("input:checkbox[name='meat']:checked").each(function(){
             mPrice.push($(this).val());
         });
-        var meatPrice = mPrice.length - 1;
+        var i=0;
+        var total=0;
+        while (i<mPrice.length) {
+            var mp = mPrice[i];
+            var price = parseFloat(mp);
+            console.log(price);
+            var total = total + price;
+            i++
+        }
+        meatPrice = total-1;
         if (meatPrice < 0) {
+            meatPrice = 0;
             priceMeat.innerHTML = "$0.00"
         }
         else priceMeat.innerHTML = "$" + meatPrice.toFixed(2);
 
+        //VEGGIE NAMES
         veggieId = [];
         $("input:checkbox[name='veggie']:checked").each(function(){
             veggieId.push($(this).attr("id"));
         });
         pizzaVeggies.innerHTML = "<strong>Veggies: </strong>" + veggieId;
         
+        //VEGGIE PRICE
         vPrice = [];
         $("input:checkbox[name='veggie']:checked").each(function(){
             vPrice.push($(this).val());
         });
-        var veggiePrice = vPrice.length - 1;
+        
+        var i=0;
+        var total=0;
+        while (i<vPrice.length) {
+            var vp = vPrice[i];
+            var price = parseFloat(vp);
+            console.log(price);
+            var total = total + price;
+            i++
+        }
+        veggiePrice = total-1;
         if (veggiePrice < 0) {
+            veggiePrice = 0;
             priceVeggies.innerHTML = "$0.00"
         }
         else priceVeggies.innerHTML = "$" + veggiePrice.toFixed(2);
     
         // TOTAL
-        var subtotal = (Number(sizePrice) + Number(crustPrice) + Number(saucePrice) + Number(cheesePrice) + Number(meatPrice) + Number(veggiePrice));
+        var subtotal = (Number(sizePrice) + Number(crustPrice) + Number(saucePrice) + Number(cheesePrice) + meatPrice + veggiePrice);
         var tax = subtotal * 0.04;
         var total = subtotal + tax;
         subtotalPrice.innerHTML = "$" + subtotal.toFixed(2);
         taxPrice.innerHTML = "$" + tax.toFixed(2);
         totalPrice.innerHTML = "$" + total.toFixed(2);
     }
-
-
-    
+ 
     function Clear() {
         $('input[type=checkbox]').prop('checked',false);
         $('input[type=radio]').prop('checked', function () {
